@@ -1,0 +1,98 @@
+#! /usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+# Installs Homebrew software.
+
+if ! command -v brew > /dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  export PATH="/usr/local/bin:$PATH"
+  printf "export PATH=\"/usr/local/bin:$PATH\"\n" >> $HOME/.bash_profile
+fi
+
+install_brew_formula asciinema
+install_brew_formula asdf
+install_brew_formula bash
+install_brew_formula bash-completion
+install_brew_formula bat
+install_brew_formula blueutil
+install_brew_formula chruby
+install_brew_formula coreutils
+install_brew_formula crystal
+install_brew_formula ctags
+install_brew_formula curl
+install_brew_formula diff-so-fancy
+install_brew_formula direnv
+install_brew_formula elm
+install_brew_formula entr
+install_brew_formula exa
+install_brew_formula exiftool
+install_brew_formula fastlane
+install_brew_formula fish
+install_brew_formula fd
+install_brew_formula flac
+install_brew_formula fzf
+install_brew_formula gcc
+install_brew_formula git
+install_brew_formula git-sizer
+install_brew_formula gnupg
+install_brew_formula gpg
+install_brew_formula graphicsmagick
+install_brew_formula graphviz
+install_brew_formula hexyl
+install_brew_formula hr
+install_brew_formula htop
+install_brew_formula httpie
+install_brew_formula httpstat
+install_brew_formula hyperfine
+install_brew_formula ioping
+install_brew_formula jq
+install_brew_formula lame
+install_brew_formula libressl
+install_brew_formula llvm
+install_brew_formula lnav
+install_brew_formula lynis
+install_brew_formula magic-wormhole
+install_brew_formula mas
+install_brew_formula minisign
+install_brew_formula ncdu
+install_brew_formula neovim
+install_brew_formula ngrep
+install_brew_formula noti
+install_brew_formula nushell
+install_brew_formula openssl
+install_brew_formula overmind
+install_brew_formula pandoc
+install_brew_formula parallel
+install_brew_formula peco
+install_brew_formula pigz
+install_brew_formula pinentry-mac
+install_brew_formula plantuml
+install_brew_formula prettyping
+install_brew_formula pv
+install_brew_formula ranger
+install_brew_formula readline
+install_brew_formula reattach-to-user-namespace
+install_brew_formula ripgrep
+install_brew_formula sassc
+install_brew_formula shellcheck
+install_brew_formula siege
+install_brew_formula sleepwatcher
+install_brew_formula starship
+install_brew_formula sox
+install_brew_formula terraform
+install_brew_formula the_silver_searcher
+install_brew_formula tmux
+install_brew_formula tokei
+install_brew_formula tree
+install_brew_formula vim
+install_brew_formula watch
+install_brew_formula wget
+install_brew_formula wrk
+install_brew_formula xsv
+install_brew_formula yank
+install_brew_formula zsh
+install_brew_formula z

@@ -1,0 +1,29 @@
+#! /usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+# Sets up and launches (if necessary) installed software.
+
+# Bash
+sudo bash -c "printf '/usr/local/bin/bash\n' >> /etc/shells"
+
+# Bash Completion
+chsh -s /usr/local/bin/bash
+
+# Homebrew
+(
+  cd /usr/local/Homebrew
+  git config --local core.hooksPath /dev/null
+)
+
+# Ruby
+# printf "%s\n" "---" > "$HOME/.gemrc"
+# printf "%s\n" "gem: --no-document" >> "$HOME/.gemrc"
+# printf "%s\n" "$MRI" > "$HOME/.ruby-version"
+# /usr/local/bin/ruby-install "ruby-$MRI"
+
+# Rust
+# curl --fail --silent --show-error https://sh.rustup.rs | sh

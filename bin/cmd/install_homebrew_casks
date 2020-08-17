@@ -1,0 +1,53 @@
+#! /usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+# Installs Homebrew Casks.
+
+install_brew_cask 1password
+install_brew_cask adobe-creative-cloud
+install_brew_cask alacritty
+install_brew_cask amethyst
+install_brew_cask appcleaner
+install_brew_cask balenaetcher
+install_brew_cask bitwarden
+install_brew_cask blue-jeans
+install_brew_cask brave-browser
+install_brew_cask clipgrab
+install_brew_cask dash
+install_brew_cask docker
+install_brew_cask dropbox
+install_brew_cask fission
+# install_brew_cask homebrew/cask-fonts/font-mononoki
+# install_brew_cask homebrew/cask-fonts/font-mononoki-nerd-font
+install_brew_cask handbrake
+install_brew_cask jitsi-meet
+install_brew_cask keybase
+install_brew_cask microsoft-teams
+install_brew_cask muzzle
+install_brew_cask ngrok
+install_brew_cask numi
+install_brew_cask obs
+install_brew_cask owasp-zap
+install_brew_cask private-internet-access
+install_brew_cask ringcentral-meetings
+install_brew_cask signal
+install_brew_cask shift
+install_brew_cask slack
+install_brew_cask spotify
+install_brew_cask switchhosts
+install_brew_cask tor-browser
+install_brew_cask transmit
+install_brew_cask vagrant
+install_brew_cask vagrant-manager
+install_brew_cask virtualbox
+install_brew_cask virtualbox-extension-pack
+install_brew_cask visual-studio-code
+install_brew_cask vlc
+install_brew_cask webex-meetings
+install_brew_cask xquartz
+install_brew_cask zeplin
+install_brew_cask zoomus

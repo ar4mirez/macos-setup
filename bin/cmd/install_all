@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+caffeinate_machine
+
+bin/cmd/install_dev_tools
+bin/cmd/install_homebrew_formulas
+bin/cmd/install_homebrew_casks
+bin/cmd/install_app_store
+bin/cmd/install_applications
+bin/cmd/install_extensions
+bin/cmd/install_default_settings
+
+clean_work_path

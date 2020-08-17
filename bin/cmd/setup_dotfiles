@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+# Sets up and launches dotfiles.
+
+# Dotfiles
+rm -f $HOME/.bash_profile
+install_git_project "https://github.com/bkuhlmann/dotfiles.git" $REPO_DOTFILES "dotfiles" "bin/run i"
+source $HOME/.bashrc

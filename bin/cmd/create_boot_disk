@@ -1,0 +1,23 @@
+#! /usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+MAC_OS_BOOT_DISK_CREATOR=${MAC_OS_BOOT_DISK_CREATOR:-"/Applications/Install macOS Catalina.app/Contents/Resources/createinstallmedia"}
+MAC_OS_BOOT_DISK_PATH=${MAC_OS_BOOT_DISK_PATH:-"/Volumes/Unitled"}
+
+printf "\nCreating macOS boot disk...\n"
+
+if [[ ! -e "$MAC_OS_BOOT_DISK_CREATOR" ]]; then
+  printf "ERROR: macOS installer does not exist: $MAC_OS_BOOT_DISK_CREATOR. Use System Preferences → Software Update to download.\n"
+  exit 1
+fi
+
+if [[ ! -d "$MAC_OS_BOOT_DISK_PATH" ]]; then
+  printf "ERROR: Boot disk must be mounted at: $MAC_OS_BOOT_DISK_PATH.\n"
+  exit 1
+fi
+
+sudo "$MAC_OS_BOOT_DISK_CREATOR" --volume "$MAC_OS_BOOT_DISK_PATH" --downloadassets --nointeraction

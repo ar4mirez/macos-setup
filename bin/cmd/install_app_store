@@ -1,0 +1,74 @@
+#! /usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+# Installs App Store software.
+
+if ! command -v mas > /dev/null; then
+  printf "ERROR: Mac App Store CLI (mas) can't be found.\n"
+  printf "       Please ensure Homebrew and mas (i.e. brew install mas) have been installed first."
+  exit 1
+fi
+
+# AdBlock
+mas install 1402042596
+
+# Display Menu
+mas install 549083868
+
+# GarageBand
+mas install 682658836
+
+# Grammarly or Safari
+mas install 1462114288
+
+# Honey
+mas install 1472777122
+
+# iA Writer
+mas install 775737590
+
+# iMovie
+mas install 408981434
+
+# Key Codes
+mas install 414568915
+
+# Keynote
+mas install 409183694
+
+# Kindle
+mas install 405399194
+
+# LimeChat
+mas install 414030210
+
+# Meeter
+mas install 1510445899
+
+# MindNode
+mas install 1289197285
+
+# Monity
+mas install 915542151
+
+# Moom
+mas install 419330170
+
+# Numbers
+mas install 409203825
+
+# Pages
+mas install 409201541
+
+# # Porn Block Plus
+# mas install 1490982798
+
+# Wikibuy from Capital One
+mas install 1477110326
+
+# Xcode
+mas install 497799835
